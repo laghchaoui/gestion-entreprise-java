@@ -7,7 +7,7 @@ public abstract class Employe implements Auditable {
     private Adresse adresse;
     private static int compteurEmployes = 0;
     //constructeur
-    public void Employe(String id,String nom,double salaireDeBase,NiveauPoste niveau){
+    public Employe(String id,String nom,double salaireDeBase,NiveauPoste niveau){
         this.id = id;
         this.nom = nom;
         this.salaireDeBase = salaireDeBase;
@@ -19,6 +19,7 @@ public abstract class Employe implements Auditable {
     public String getNom(){return nom;}
     public double getSalaireDeBase(){return salaireDeBase;}
     public NiveauPoste getNiveau(){return niveau;}
+    public static int getCompteurEmployes(){return compteurEmployes;}
     //setters
     public void setId(String id){this.id = id;}
     public void setNom(String nom){this.nom = nom;}

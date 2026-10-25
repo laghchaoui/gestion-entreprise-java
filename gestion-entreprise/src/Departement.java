@@ -8,4 +8,8 @@ public class Departement {
         this.nomDepartement = nomDepartement;
         this.employes = new ArrayList<>();
     }
+    public void ajouterEmploye(Employe emp){
+        this.employes.add(emp);
+        System.out.println(emp.getNom() + " a bien été ajouté au département " + this.nomDepartement);
+    }
 }
